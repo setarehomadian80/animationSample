@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(242, 235, 235, 0.481);
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    
+}
+.content{
+    position: relative;
+}
+.content h2{
+    position: absolute;
+    /* color: white; */
+    transform: translate(-50%, -50%);
+    font-size: 300px;
+
+    &:nth-child(1)
+    {
+        color: transparent;
+        -webkit-text-stroke: 2px #03a9f4;
+    }
+    &:nth-child(2)
+    {
+        color: #03a9f4;
+        animation: animate 3s linear infinite;
+    }
+}
+@keyframes animate
+{
+    0%,100%
+    {
+        clip-path: polygon(13% 27%, 21% 41%, 36% 44%, 51% 50%, 68% 48%, 83% 55%, 100% 48%, 100% 98%, 1% 100%, 0% 12%);
+    }
+    50%
+    {
+        clip-path: polygon(100% 18%, 82% 40%, 60% 41%, 43% 54%, 29% 46%, 13% 56%, 0% 46%, 0% 98%, 100% 100%);  
+    }
+}

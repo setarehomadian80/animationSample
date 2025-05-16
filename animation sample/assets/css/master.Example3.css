@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.section {
+    width: 100%;
+    height: 100vh;
+    border: 2px solid black;
+
+    >.slider {
+        width: 40%;
+        height: 60%;
+        border: 2px solid black;
+        display: flex;
+        margin: 100px auto;
+        position: relative;
+        overflow: hidden;
+
+        >figure {
+            width: 100%;
+            height: 100%;
+            border: 2px solid black;
+            background-color: blueviolet;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            animation: 15s linear infinite;
+
+            &:nth-of-type(1){
+                animation-name: img1;
+            }
+             &:nth-of-type(2){
+                animation-name: img2;
+            }
+             &:nth-of-type(3){
+                animation-name: img3;
+            }
+
+            >img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            >figcaption{
+                width: 100%;
+                height: 100%;
+                background-color: rgba(73, 42, 165, 0.258);
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                color: rgb(252, 249, 249);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+            }
+
+
+        }
+
+    }
+}
+@keyframes img1{
+    0%{left: 0;}
+    30%{left: 0;}
+    36%{left: 100%;}
+    36.00000001%{left: -100%;}
+    94%{left: -100%;}
+    100%{left: 0;}
+}
+@keyframes img2{
+    0%{left: -100%;}
+    30%{left: -100%;}
+    36%{left: 0;}
+    63%{left: 0;}
+    69%{left: 100%;}
+    69.00000001%{left: -100%;}
+    100%{left: -100%;}
+}
+@keyframes img3{
+    0%{left: -100%;}
+    63%{left: -100%;}
+    69%{left: 0;}
+    94%{left: 0;}
+    100%{left:100%;}
+}

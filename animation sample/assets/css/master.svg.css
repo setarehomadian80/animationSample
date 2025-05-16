@@ -1,0 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ///////////////section///////////// */
+section {
+    background-color: rgba(165, 42, 42, 0.508);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: changeColor 10s linear infinite;
+}
+
+@keyframes changeColor {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+/* ///////////////svg/////////////// */
+
+svg {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    z-index: 1000;
+    /* background-color: rgb(148, 90, 13); */
+    animation: animate2 2s ease-in-out alternate infinite;
+}
+
+@keyframes animate2
+{
+0%
+{
+transform: rotatey(0deg);
+}
+50%
+{
+transform: rotateY(0deg);
+}
+50.00001%,100%
+{
+transform: rotateY(180deg);
+}
+}
+
+svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 10px;
+    stroke: #25e6ff;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 250;
+    stroke-dashoffset: 249;
+    animation: animate 2s ease-in-out alternate infinite;
+}
+
+@keyframes animate {
+
+    0%,
+    2% {
+        stroke-dashoffset: 249;
+    }
+
+    50% {
+        stroke-dashoffset: 125;
+    }
+
+    90%,
+    100% {
+        stroke-dashoffset: 249;
+    }
+}
+
+/* ////////////loader////////// */
+.loader {
+    animation: positionx 2s ease-in-out alternate infinite;
+    /* background-color: blueviolet; */
+}
+
+@keyframes positionx {
+    0% {
+        transform: rotate(180deg) translateX(-40px);
+    }
+
+    100% {
+        transform: rotate(180deg) translateX(40px);
+    }
+}
+
+.box {
+    /* background-color: brown; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    -webkit-box-reflect: below -85px linear-gradient(transparent, rgba(0, 0, 0, 0.442));
+}
+.box:nth-child(2)
+{
+    filter: blur(10px);
+}
+.box:nth-child(3)
+{
+    filter: blur(20px);
+}
